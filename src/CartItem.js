@@ -19,7 +19,7 @@ class CartItem extends React.Component{
                         {/* {Buttons} */}
                         <img className="action-icons" src="https://cdn-icons-png.flaticon.com/128/1828/1828926.png" alt = "increase" onClick={() => this.props.handleIncreaseQuantity(this.props.product)}/>
                         <img className="action-icons" src="https://cdn-icons-png.flaticon.com/128/1828/1828906.png" alt = "decrease" onClick={() => this.props.handleDecreaseQuantity(this.props.product)}/>
-                        <img className="action-icons" src="https://cdn-icons-png.flaticon.com/128/2907/2907762.png" alt = "delete"/>
+                        <img className="action-icons" src="https://cdn-icons-png.flaticon.com/128/2907/2907762.png" alt = "delete" onClick={() => this.props.handleDeleteProduct(this.props.product.id)}/>
                     </div>
                 </div>
             </div>
