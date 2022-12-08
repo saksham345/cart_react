@@ -1,11 +1,8 @@
 import React from 'react';
 import './index.css'
 
-class CartItem extends React.Component{
-    
-    render()
-    {
-        const {title , qty , price} = this.props.product;
+const CartItem = (props) =>{
+        const {title , qty , price} = props.product;
         return(
             <div className="cart-item">
                 <div className="left-block">
@@ -17,15 +14,14 @@ class CartItem extends React.Component{
                     <div style={{color : '#777'}}> Qty: {qty}</div>
                     <div className="cart-item-actions">
                         {/* {Buttons} */}
-                        <img className="action-icons" src="https://cdn-icons-png.flaticon.com/128/1828/1828926.png" alt = "increase" onClick={() => this.props.handleIncreaseQuantity(this.props.product)}/>
-                        <img className="action-icons" src="https://cdn-icons-png.flaticon.com/128/1828/1828906.png" alt = "decrease" onClick={() => this.props.handleDecreaseQuantity(this.props.product)}/>
-                        <img className="action-icons" src="https://cdn-icons-png.flaticon.com/128/2907/2907762.png" alt = "delete" onClick={() => this.props.handleDeleteProduct(this.props.product.id)}/>
+                        <img className="action-icons" src="https://cdn-icons-png.flaticon.com/128/1828/1828926.png" alt = "increase" onClick={() => props.handleIncreaseQuantity(props.product)}/>
+                        <img className="action-icons" src="https://cdn-icons-png.flaticon.com/128/1828/1828906.png" alt = "decrease" onClick={() => props.handleDecreaseQuantity(props.product)}/>
+                        <img className="action-icons" src="https://cdn-icons-png.flaticon.com/128/2907/2907762.png" alt = "delete" onClick={() => props.handleDeleteProduct(props.product.id)}/>
                     </div>
                 </div>
             </div>
         );
     }
-}
 const styles = {
     image:{
         height : 110,
